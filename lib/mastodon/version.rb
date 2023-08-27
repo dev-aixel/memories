@@ -13,7 +13,7 @@ module Mastodon
     end
 
     def flags
-      '+Beta'
+      '+Beta 1'
     end
 
     def suffix
