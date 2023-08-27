@@ -1,103 +1,103 @@
-<h1><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./lib/assets/wordmark.dark.png?raw=true">
-  <source media="(prefers-color-scheme: light)" srcset="./lib/assets/wordmark.light.png?raw=true">
-  <img alt="Mastodon" src="./lib/assets/wordmark.light.png?raw=true" height="34">
-</picture></h1>
+# <h1><picture>
+#   <source media="(prefers-color-scheme: dark)" srcset="./lib/assets/wordmark.dark.png?raw=true">
+#   <source media="(prefers-color-scheme: light)" srcset="./lib/assets/wordmark.light.png?raw=true">
+#   <img alt="Mastodon" src="./lib/assets/wordmark.light.png?raw=true" height="34">
+# </picture></h1>
 
-[![GitHub release](https://img.shields.io/github/release/mastodon/mastodon.svg)][releases]
-[![Build Status](https://img.shields.io/circleci/project/github/mastodon/mastodon.svg)][circleci]
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/mastodon/mastodon.svg)][code_climate]
+[![GitHubのリリース](https://img.shields.io/github/release/mastodon/mastodon.svg)][リリース]
+[![ビルドステータス](https://img.shields.io/circleci/project/github/mastodon/mastodon.svg)][circleci]
+[![コードのクリーンさ](https://img.shields.io/codeclimate/maintainability/mastodon/mastodon.svg)][code_climate]
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mastodon/localized.svg)][crowdin]
 
-[releases]: https://github.com/mastodon/mastodon/releases
+[リリース]: https://github.com/mastodon/mastodon/releases
 [circleci]: https://circleci.com/gh/mastodon/mastodon
 [code_climate]: https://codeclimate.com/github/mastodon/mastodon
 [crowdin]: https://crowdin.com/project/mastodon
 
-Mastodon is a **free, open-source social network server** based on ActivityPub where users can follow friends and discover new ones. On Mastodon, users can publish anything they want: links, pictures, text, video. All Mastodon servers are interoperable as a federated network (users on one server can seamlessly communicate with users from another one, including non-Mastodon software that implements ActivityPub!)
+Mastodonは、ActivityPubに基づく**無料でオープンソースのソーシャルネットワークサーバー**です。ユーザーはMastodon上で友達をフォローしたり、新しい友達を見つけたりすることができます。Mastodonでは、リンク、画像、テキスト、ビデオなど、何でも投稿することができます。すべてのMastodonサーバーは相互運用可能で、フェデレーションされたネットワークを形成します（1つのサーバー上のユーザーは、別のサーバー上のユーザーとシームレスにコミュニケーションできます。これにはActivityPubを実装した非Mastodonソフトウェアも含まれます！）
 
-Click below to **learn more** in a video:
+以下のリンクをクリックして、動画で詳細を**学ぶ**ことができます:
 
-[![Screenshot](https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/ezgif-2-60f1b00403.gif)][youtube_demo]
+[![スクリーンショット](https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/ezgif-2-60f1b00403.gif)][youtube_demo]
 
 [youtube_demo]: https://www.youtube.com/watch?v=IPSbNdBmWKE
 
-## Navigation
+## ナビゲーション
 
-- [Project homepage 🐘](https://joinmastodon.org)
-- [Support the development via Patreon][patreon]
-- [View sponsors](https://joinmastodon.org/sponsors)
-- [Blog](https://blog.joinmastodon.org)
-- [Documentation](https://docs.joinmastodon.org)
-- [Official Docker image](https://github.com/mastodon/mastodon/pkgs/container/mastodon)
-- [Browse Mastodon servers](https://joinmastodon.org/communities)
-- [Browse Mastodon apps](https://joinmastodon.org/apps)
+- [プロジェクトホームページ 🐘](https://joinmastodon.org)
+- [Patreonを通じて開発をサポートする][patreon]
+- [スポンサーを表示する](https://joinmastodon.org/sponsors)
+- [ブログ](https://blog.joinmastodon.org)
+- [ドキュメント](https://docs.joinmastodon.org)
+- [公式Dockerイメージ](https://github.com/mastodon/mastodon/pkgs/container/mastodon)
+- [Mastodonサーバーを閲覧する](https://joinmastodon.org/communities)
+- [Mastodonアプリを閲覧する](https://joinmastodon.org/apps)
 
 [patreon]: https://www.patreon.com/mastodon
 
-## Features
+## 特徴
 
 <img src="/app/javascript/images/elephant_ui_working.svg?raw=true" align="right" width="30%" />
 
-### No vendor lock-in: Fully interoperable with any conforming platform
+### ベンダーロックインなし：準拠するプラットフォームと完全に相互運用可能
 
-It doesn't have to be Mastodon; whatever implements ActivityPub is part of the social network! [Learn more](https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/)
+Mastodonでなくても、ActivityPubを実装しているものなら、どれでもソーシャルネットワークの一部です！ [詳細を学ぶ](https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/)
 
-### Real-time, chronological timeline updates
+### リアルタイムの時系列タイムラインの更新
 
-Updates of people you're following appear in real-time in the UI via WebSockets. There's a firehose view as well!
+フォローしている人々の更新は、UI上でWebSocketsを介してリアルタイムで表示されます。ファイアホースビューもあります！
 
-### Media attachments like images and short videos
+### 画像や短いビデオなどのメディアの添付
 
-Upload and view images and WebM/MP4 videos attached to the updates. Videos with no audio track are treated like GIFs; normal videos loop continuously!
+アップデートに添付された画像やWebM/MP4ビデオをアップロードして表示できます。音声トラックのないビデオはGIFのように扱われ、通常のビデオは連続的にループします！
 
-### Safety and moderation tools
+### 安全性とモデレーションツール
 
-Mastodon includes private posts, locked accounts, phrase filtering, muting, blocking and all sorts of other features, along with a reporting and moderation system. [Learn more](https://blog.joinmastodon.org/2018/07/cage-the-mastodon/)
+Mastodonには、プライベート投稿、ロックされたアカウント、フレーズフィルタリング、ミュート、ブロックなどの機能が含まれており、報告とモデレーションシステムも備わっています。 [詳細を学ぶ](https://blog.joinmastodon.org/2018/07/cage-the-mastodon/)
 
-### OAuth2 and a straightforward REST API
+### OAuth2と簡単なREST API
 
-Mastodon acts as an OAuth2 provider, so 3rd party apps can use the REST and Streaming APIs. This results in a rich app ecosystem with a lot of choices!
+MastodonはOAuth2プロバイダーとして機能し、サードパーティのアプリはRESTおよびStreaming APIを使用できます。これにより、多くの選択肢がある豊富なアプリエコシステムが生まれます！
 
-## Deployment
+## デプロイメント
 
-### Tech stack:
+### テックスタック：
 
-- **Ruby on Rails** powers the REST API and other web pages
-- **React.js** and Redux are used for the dynamic parts of the interface
-- **Node.js** powers the streaming API
+- **Ruby on Rails** はREST APIおよび他のウェブページを支えています
+- **React.js**とReduxはインターフェースのダイナミックパーツに使用されています
+- **Node.js**はストリーミングAPIのパワーを提供しています
 
-### Requirements:
+### 要件：
 
-- **PostgreSQL** 9.5+
-- **Redis** 4+
-- **Ruby** 2.7+
-- **Node.js** 14+
+- **PostgreSQL** 9.5以上
+- **Redis** 4以上
+- **Ruby** 2.7以上
+- **Node.js** 14以上
 
-The repository includes deployment configurations for **Docker and docker-compose** as well as specific platforms like **Heroku**, **Scalingo**, and **Nanobox**. For Helm charts, reference the [mastodon/chart repository](https://github.com/mastodon/chart). The [**standalone** installation guide](https://docs.joinmastodon.org/admin/install/) is available in the documentation.
+リポジトリには、**Dockerとdocker-compose**のデプロイメント設定が含まれています。また、**Heroku**、**Scalingo**、および**Nanobox**といった特定のプラットフォーム向けのデプロイメント設定もあります。Helmチャートについては、[mastodon/chartリポジトリ](https://github.com/mastodon/chart)を参照してください。[**スタンドアロン**インストールガイド](https://docs.joinmastodon.org/admin/install/)はドキュメントで利用できます。
 
-A **Vagrant** configuration is included for development purposes. To use it, complete following steps:
+開発目的のために**Vagrant**の設定も含まれています。以下の手順を実行して使用できます：
 
-- Install Vagrant and Virtualbox
-- Install the `vagrant-hostsupdater` plugin: `vagrant plugin install vagrant-hostsupdater`
-- Run `vagrant up`
-- Run `vagrant ssh -c "cd /vagrant && foreman start"`
-- Open `http://mastodon.local` in your browser
+- VagrantとVirtualboxをインストール
+- `vagrant-hostsupdater`プラグインをインストール：`vagrant plugin install vagrant-hostsupdater`
+- `vagrant up`を実行
+- `vagrant ssh -c "cd /vagrant && foreman start"`を実行
+- ブラウザで`http://mastodon.local`を開く
 
-## Contributing
+## 貢献
 
-Mastodon is **free, open-source software** licensed under **AGPLv3**.
+Mastodonは**無料のオープンソースソフトウェア**で、**AGPLv3**ライセンスのもとで提供されています。
 
-You can open issues for bugs you've found or features you think are missing. You can also submit pull requests to this repository or submit translations using Crowdin. To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md). If your contributions are accepted into Mastodon, you can request to be paid through [our OpenCollective](https://opencollective.com/mastodon).
+バグを見つけたり、欠けている機能を提案したりするためにイシューをオープンすることができます。また、このリポジトリにプルリクエストを提出したり、Crowdinを使用して翻訳を提出したりすることもできます。始めるには、[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。Mastodonに対する貢献が受け入れられると、[OpenCollective](https://opencollective.com/mastodon)を通じて報酬を受け取ることができます。
 
-**IRC channel**: #mastodon on irc.libera.chat
+**IRCチャンネル**: irc.libera.chatの #mastodon
 
-## License
+## ライセンス(Mastodon)
 
-Copyright (C) 2016-2022 Eugen Rochko & other Mastodon contributors (see [AUTHORS.md](AUTHORS.md))
+著作権（C）2016-2022 Eugen Rochko & その他のMastodonの貢献者（[AUTHORS.md](AUTHORS.md)を参照）
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+このプログラムはフリーソフトウェアです。あなたはそれを再配布したり、修正したりすることができます。これは、GNU Affero General Public Licenseに基づくものです。ライセンスのバージョンは、Free Software Foundationによって公表されたバージョン3、または（お使いの場合）それ以降のバージョンのいずれかを選択できます。
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+このプログラムは有用であることを期待して配布されていますが、いかなる保証もなく、暗黙の保証を含め、市販性や特定の目的への適合性に関する保証もありません。詳細については、GNU Affero General Public Licenseを参照してください。
 
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+あなたは、このプログラムと共にGNU Affero General Public Licenseのコピーを受け取るはずです。もし受け取っていない場合は、<https://www.gnu.org/licenses/>を参照してください。
