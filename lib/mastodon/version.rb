@@ -4,20 +4,16 @@ module Mastodon
   module Version
     module_function
 
-    def major
-      4
-    end
-
     def minor
-      1
+      0
     end
 
     def patch
-      4
+      1
     end
 
     def flags
-      '+aniwork'
+      '+Beta'
     end
 
     def suffix
@@ -33,7 +29,7 @@ module Mastodon
     end
 
     def repository
-      ENV.fetch('GITHUB_REPOSITORY', 'elysiaroot/aniwork-mastodon')
+      ENV.fetch('GITHUB_REPOSITORY', 'dev-aixel/memories')
     end
 
     def source_base_url
